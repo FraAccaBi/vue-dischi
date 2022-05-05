@@ -17,7 +17,7 @@
 export default {
   name: 'DiskComponent',
   props: {
-    poster: String,
+    poster: URL,
     title: String,
     author: String,
     year: String

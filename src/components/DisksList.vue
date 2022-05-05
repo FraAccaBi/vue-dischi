@@ -3,9 +3,9 @@
      <section v-if="!loading">
       <div class="container">
         <div class="row row-cols-5">
-            <div class="col" v-for="(item, index) in list" :key="index">
+            <div class="col g-1" v-for="(item, index) in list" :key="index">
             <DiskComponent 
-                :img="item.poster"
+                :poster="item.poster"
                 :title="item.title"
                 :author="item.author"
                 :year="item.year"
