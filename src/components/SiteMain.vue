@@ -1,28 +1,18 @@
 <template>
   <div >
-    
+    <DisksList />
     
   </div>
 </template>
 
 <script>
 
-import axios from "axios";
+import DisksList from "@/components/DisksList.vue";
+
 export default {
   name: 'SiteMain',
-  data() {
-    return {
-      API_URL: "https://flynn.boolean.careers/exercises/api/array/music",
-    };
-  },
-  components: {},
-  methods: {
-      callAPI(){
-        axios.get(this.API_URL).then((response) => {
-        console.log(response);
-        this.characters = response.data;
-      })
-      }
+  components: {
+    DisksList
   }
 }
 </script>
