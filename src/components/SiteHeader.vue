@@ -1,6 +1,6 @@
 <template>
-  <div >
-    
+  <div class="header" >
+    <img class="d-flex justify-content-start" src="../../public/Spotify_App_Logo.png" alt="">
     
   </div>
 </template>
@@ -20,4 +20,12 @@ export default {
 
 @use '@/assets/scss/style.scss';
 
+
+.header{
+  background-color: #2E3A46;
+  img{
+    height: 60px;
+  
+  }
+}
 </style>

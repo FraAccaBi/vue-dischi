@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container-fluid">
      <section v-if="!loading">
       <div class="container">
         <div class="row row-cols-5">
@@ -74,8 +74,13 @@ export default {
 
 
 <style lang="scss">
-.container{
-    height: calc(100vh - 100px);
+.container-fluid{
+    background-color: #1E2D3B ;
+    height: calc(100vh - 60px);
+    .container{
+        padding-top: 2rem;
+    }
 }
+
 
 </style>
