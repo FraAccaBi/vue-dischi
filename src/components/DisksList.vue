@@ -1,15 +1,16 @@
 <template>
   <div>
-     <section class="characters" v-if="!loading">
+     <section v-if="!loading">
       <div class="container">
-        <h1 class="text-center my-3">spotify</h1>
-        <div class="row g-3">
-          <DiskComponent 
-            :album="album"
-            v-for="(album, index) in discs"
-            :key="index"
+        <div class="row row-cols-5"></div>
+        
+          <DiskComponent v-for="(item, index) in list" :key="index"
+            :img="item.poster"
+            :title="item.title"
+            :author="item.author"
+            :year="item.year"
           />
-        </div>
+        
       </div>
     </section>
     <div
@@ -39,9 +40,9 @@ export default {
   data() {
     return {
       API_URL: "https://flynn.boolean.careers/exercises/api/array/music",
-      discs: null,
+      item: null,
       loading: true,
-      error: null,
+      error:null
     };
   },
   methods: {
@@ -49,7 +50,8 @@ export default {
       axios
         .get(this.API_URL)
         .then((response) => {
-          this.characters = response.data;
+            console.log(this.list);
+          this.list = response.data.response;
           this.loading = false;
         })
         .catch((error) => {
@@ -70,5 +72,8 @@ export default {
 
 
 <style lang="scss">
+.container{
+    height: calc(100vh - 100px);
+}
 
 </style>

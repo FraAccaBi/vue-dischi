@@ -1,10 +1,10 @@
 <template>
   <div >
      <div class="col" >
-        <img :src="album.poster" alt="" />
-        <h2>{{ album.title }}</h2>
-        <div>{{ album.author }}</div>
-        <div>{{ album.year }}</div>
+        <img :src="poster" alt="title" />
+        <div>{{title}}</div>
+        <div>{{author}}</div>
+        <div>{{year}}</div>
     </div>
   </div>
 
@@ -17,7 +17,10 @@
 export default {
   name: 'DiskComponent',
   props: {
-    album: Object
+    poster: String,
+    title: String,
+    author: String,
+    year: String
   }
 }
 </script>
