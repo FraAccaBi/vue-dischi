@@ -2,14 +2,16 @@
   <div>
      <section v-if="!loading">
       <div class="container">
-        <div class="row row-cols-5"></div>
-        
-          <DiskComponent v-for="(item, index) in list" :key="index"
-            :img="item.poster"
-            :title="item.title"
-            :author="item.author"
-            :year="item.year"
-          />
+        <div class="row row-cols-5">
+            <div class="col" v-for="(item, index) in list" :key="index">
+            <DiskComponent 
+                :img="item.poster"
+                :title="item.title"
+                :author="item.author"
+                :year="item.year"
+            />
+            </div>
+        </div>
         
       </div>
     </section>
@@ -42,7 +44,8 @@ export default {
       API_URL: "https://flynn.boolean.careers/exercises/api/array/music",
       item: null,
       loading: true,
-      error:null
+      error:null,
+      list: null
     };
   },
   methods: {
@@ -50,7 +53,6 @@ export default {
       axios
         .get(this.API_URL)
         .then((response) => {
-            console.log(this.list);
           this.list = response.data.response;
           this.loading = false;
         })
