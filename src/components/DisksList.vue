@@ -9,6 +9,7 @@
                 :title="item.title"
                 :author="item.author"
                 :year="item.year"
+                :genre="item.genre"
             />
             </div>
         </div>
