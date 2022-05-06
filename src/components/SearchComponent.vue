@@ -4,7 +4,7 @@
       <input
         class="form-control me-2"
         type="search"
-        placeholder="Search"
+        placeholder="Search author"
         aria-label="Search"
         :value="searchText"
         @input="$emit('input', $event.target.value)"
