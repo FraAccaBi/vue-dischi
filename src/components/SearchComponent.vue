@@ -19,6 +19,17 @@
         <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
         Search
       </button>
+      <div class="dropdown">
+  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    What's your mood today?
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Rock</a></li>
+    <li><a class="dropdown-item" href="#">Pop</a></li>
+    <li><a class="dropdown-item" href="#">Jazz</a></li>
+    <li><a class="dropdown-item" href="#">Metal</a></li>
+  </ul>
+</div>
     </form>
   </div>
  

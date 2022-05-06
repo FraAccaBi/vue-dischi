@@ -53,8 +53,13 @@ export default {
     height: 60px;
   
   };
-  .button{
-    border: 1px solid $spotify-primary
+  button{
+    border: 1px solid $spotify-primary;
+    color: $spotify-primary;
+    &:hover{
+      background-color: $text-secondary;
+      color: $spotify-primary;
+    }
   };
   .search{
     height: 50px;
