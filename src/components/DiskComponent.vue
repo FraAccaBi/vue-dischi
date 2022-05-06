@@ -20,7 +20,7 @@
 export default {
   name: 'DiskComponent',
   props: {
-    poster: URL,
+    poster:String,
     title: String,
     author: String,
     year: String
@@ -29,16 +29,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/variables.scss';
 img{
   height: 160px;
 }
 .card{
-  background-color: #2E3A46 ;
+  background-color: $header-bg ;
   height: 280px;
   padding: 1rem;
 }
 .text{
-  color: #6D6660;
+  color: $text-secondary;
 }
 .title{
   color: #ffffff;

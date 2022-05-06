@@ -74,8 +74,11 @@ export default {
 
 
 <style lang="scss">
+
+@import '@/assets/scss/variables.scss';
+
 .container-fluid{
-    background-color: #1E2D3B ;
+    background-color: $main-bg ;
     height: calc(100vh - 60px);
     .container{
         padding-top: 2rem;
