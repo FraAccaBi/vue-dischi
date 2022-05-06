@@ -11,6 +11,7 @@
 <script>
 
 import SearchBox from "@/components/SearchComponent.vue";
+import state from "@/state.js";
 export default {
   name: 'SiteHeader',
   components:{
@@ -23,7 +24,9 @@ export default {
   },
   methods: {
     search() {
-      console.log('Searching ...');
+      //console.log('Searching ...');
+      state.searchText = this.searchText;
+      console.log(state.searchText);
     },
   },
 }

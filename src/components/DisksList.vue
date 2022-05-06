@@ -3,7 +3,7 @@
      <section v-if="!loading">
       <div class="container">
         <div class="row row-cols-5">
-            <div class="col g-1" v-for="(item, index) in list" :key="index">
+            <div class="col g-1" v-for="(item, index) in filtered" :key="index">
             <DiskComponent 
                 :poster="item.poster"
                 :title="item.title"
@@ -33,9 +33,27 @@
 
 import axios from "axios";
 import DiskComponent from "@/components/DiskComponent.vue";
+import state from "@/state.js";
 
 export default {
   name: "DisksList",
+  computed: {
+    filtered(){
+    // Verifichiamo se state.searchText non é vuoto e se si filtriamo l'array facendone una copia con filter e restituendola
+      if(state.searchText) {
+        // applicando filter all'array stiamo generando una nuova array
+        return this.list.filter(item => {
+            // ora usiamo state.searchText per filtrare i dati
+          return item.name.toLowerCase().includes(state.searchText.toLowerCase())
+        })
+        
+      } 
+      /* Se lo state.searchText é vuoto restituiamo l'array originale */
+      else {
+        return this.list
+      }
+    }
+  },
   components: {
     DiskComponent,
   },
