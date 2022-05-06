@@ -59,7 +59,17 @@ export default {
           }
         ]
       }
+    },
+    methods:{
+      selected(){
+        /* if(this.selected === item.genre){
+          return this.list.filter(item => {
+            return item.genre.includes(this.selected))
+          }) */
+          console.log('selected');
+        }
     }
+    
 }
 
     

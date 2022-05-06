@@ -55,7 +55,7 @@ export default {
         return this.list
       }
     }
-  },
+  },  
   components: {
     DiskComponent,
   },
@@ -82,6 +82,13 @@ export default {
           this.error = `Sorry There is a problem! ${error}`;
         });
     },
+    selected(){
+        /* if(this.selected === item.genre){
+          return this.list.filter(item => {
+            return item.genre.includes(this.selected))
+          }) */
+          console.log(this.selected);
+        }
   },
   mounted() {
     this.callApi();
