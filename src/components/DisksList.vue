@@ -44,7 +44,8 @@ export default {
         // applicando filter all'array stiamo generando una nuova array
         return this.list.filter(item => {
             // ora usiamo state.searchText per filtrare i dati
-          return item.title.toLowerCase().includes(state.searchText.toLowerCase())
+          return item.author.toLowerCase().includes(state.searchText.toLowerCase()
+          )
         })
         
       } 
@@ -91,7 +92,7 @@ export default {
 
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 @import '@/assets/scss/variables.scss';
 

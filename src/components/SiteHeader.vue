@@ -1,9 +1,18 @@
 <template>
-  <div class="header" >
-    <img class="d-flex justify-content-start p-2" src="../../public/pngwing.png" alt="">
-    <div class="search">
-      <SearchBox v-model="searchText" @formSubmit="search" />
+  <div class="header d-flex" >
+    <div class="container-fluid">
+      <div class="row row-cols-2">
+        <div class="col">
+          <img class="d-flex justify-content-start p-2" src="../../public/pngwing.png" alt="">
+        </div>
+      
+      <div class="search col py-2">
+        <SearchBox v-model="searchText" @formSubmit="search" />
+      </div>
     </div>
+  </div>
+    
+    
   </div>
   
 </template>
