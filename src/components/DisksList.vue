@@ -3,7 +3,7 @@
      <section v-if="!loading">
       <div class="container">
         <div class="row row-cols-5">
-            <div class="col g-1" v-for="(item, index) in filtered" :key="index">
+            <div class="col g-1" v-for="(item, index) in filtered" :key="index" >
             <DiskComponent 
                 :poster="item.poster"
                 :title="item.title"
@@ -61,11 +61,12 @@ export default {
   },
   data() {
     return {
-      API_URL: "https://flynn.boolean.careers/exercises/api/array/music",
+      API_URL: "http://localhost/PHP/php-ajax-dischi/MILESTONE_1/db.php",
       item: null,
       loading: true,
       error:null,
       list: null
+      
     };
   },
   methods: {
@@ -82,13 +83,7 @@ export default {
           this.error = `Sorry There is a problem! ${error}`;
         });
     },
-    selected(){
-        /* if(this.selected === item.genre){
-          return this.list.filter(item => {
-            return item.genre.includes(this.selected))
-          }) */
-          console.log(this.selected);
-        }
+    
   },
   mounted() {
     this.callApi();
